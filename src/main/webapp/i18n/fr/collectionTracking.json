@@ -1,0 +1,42 @@
+{
+  "ccwApplicationApp": {
+    "collectionTracking": {
+      "home": {
+        "title": "CollectionTrackings",
+        "createLabel": "Créer un nouveau Collection Tracking",
+        "createOrEditLabel": "Créer ou éditer un Collection Tracking",
+        "notFound": "Aucun Collection Tracking trouvé"
+      },
+      "created": "Un nouveau Collection Tracking a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Collection Tracking avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Collection Tracking avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Collection Tracking {{ id }} ?"
+      },
+      "detail": {
+        "title": "Collection Tracking"
+      },
+      "eMPID": "E MPID",
+      "eMPNAME": "E MPNAME",
+      "uNITID": "U NITID",
+      "pROMISEDATE": "P ROMISEDATE",
+      "cOMMENTS": "C OMMENTS",
+      "bUSINESSPROPOSALNO": "B USINESSPROPOSALNO",
+      "sUBPROPOSALNO": "S UBPROPOSALNO",
+      "mOBILENO": "M OBILENO",
+      "aCCOUNTNO": "A CCOUNTNO",
+      "accountTitle": "Account Title",
+      "oDDays": "O D Days",
+      "oSAmount": "O S Amount",
+      "oSProfit": "O S Profit",
+      "cROID": "C ROID",
+      "cRONAME": "C RONAME",
+      "rELATIONID": "R ELATIONID",
+      "wILLINGTOPAY": "W ILLINGTOPAY",
+      "fOLLOWUPDATE": "F OLLOWUPDATE",
+      "dELINQUENCYREASON": "D ELINQUENCYREASON",
+      "vISITEDBY": "V ISITEDBY",
+      "cREATEDON": "C REATEDON"
+    }
+  }
+}

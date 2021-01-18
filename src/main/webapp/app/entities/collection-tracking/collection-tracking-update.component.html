@@ -1,0 +1,272 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-collection-tracking-heading" jhiTranslate="ccwApplicationApp.collectionTracking.home.createOrEditLabel">Create or edit a Collection Tracking</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.eMPID" for="field_eMPID">E MPID</label>
+                    <input type="text" class="form-control" name="eMPID" id="field_eMPID"
+                           formControlName="eMPID"/>
+                    <div *ngIf="editForm.get('eMPID')!.invalid && (editForm.get('eMPID')!.dirty || editForm.get('eMPID')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('eMPID')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.eMPNAME" for="field_eMPNAME">E MPNAME</label>
+                    <input type="text" class="form-control" name="eMPNAME" id="field_eMPNAME"
+                           formControlName="eMPNAME"/>
+                    <div *ngIf="editForm.get('eMPNAME')!.invalid && (editForm.get('eMPNAME')!.dirty || editForm.get('eMPNAME')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('eMPNAME')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.uNITID" for="field_uNITID">U NITID</label>
+                    <input type="text" class="form-control" name="uNITID" id="field_uNITID"
+                           formControlName="uNITID"/>
+                    <div *ngIf="editForm.get('uNITID')!.invalid && (editForm.get('uNITID')!.dirty || editForm.get('uNITID')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('uNITID')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.pROMISEDATE" for="field_pROMISEDATE">P ROMISEDATE</label>
+                    <div class="input-group">
+                        <input id="field_pROMISEDATE" type="text" class="form-control" name="pROMISEDATE" ngbDatepicker #pROMISEDATEDp="ngbDatepicker" formControlName="pROMISEDATE"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="pROMISEDATEDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.cOMMENTS" for="field_cOMMENTS">C OMMENTS</label>
+                    <input type="text" class="form-control" name="cOMMENTS" id="field_cOMMENTS"
+                           formControlName="cOMMENTS"/>
+                    <div *ngIf="editForm.get('cOMMENTS')!.invalid && (editForm.get('cOMMENTS')!.dirty || editForm.get('cOMMENTS')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('cOMMENTS')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.bUSINESSPROPOSALNO" for="field_bUSINESSPROPOSALNO">B USINESSPROPOSALNO</label>
+                    <input type="text" class="form-control" name="bUSINESSPROPOSALNO" id="field_bUSINESSPROPOSALNO"
+                           formControlName="bUSINESSPROPOSALNO"/>
+                    <div *ngIf="editForm.get('bUSINESSPROPOSALNO')!.invalid && (editForm.get('bUSINESSPROPOSALNO')!.dirty || editForm.get('bUSINESSPROPOSALNO')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('bUSINESSPROPOSALNO')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.sUBPROPOSALNO" for="field_sUBPROPOSALNO">S UBPROPOSALNO</label>
+                    <input type="text" class="form-control" name="sUBPROPOSALNO" id="field_sUBPROPOSALNO"
+                           formControlName="sUBPROPOSALNO"/>
+                    <div *ngIf="editForm.get('sUBPROPOSALNO')!.invalid && (editForm.get('sUBPROPOSALNO')!.dirty || editForm.get('sUBPROPOSALNO')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('sUBPROPOSALNO')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.mOBILENO" for="field_mOBILENO">M OBILENO</label>
+                    <input type="text" class="form-control" name="mOBILENO" id="field_mOBILENO"
+                           formControlName="mOBILENO"/>
+                    <div *ngIf="editForm.get('mOBILENO')!.invalid && (editForm.get('mOBILENO')!.dirty || editForm.get('mOBILENO')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('mOBILENO')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.aCCOUNTNO" for="field_aCCOUNTNO">A CCOUNTNO</label>
+                    <input type="text" class="form-control" name="aCCOUNTNO" id="field_aCCOUNTNO"
+                           formControlName="aCCOUNTNO"/>
+                    <div *ngIf="editForm.get('aCCOUNTNO')!.invalid && (editForm.get('aCCOUNTNO')!.dirty || editForm.get('aCCOUNTNO')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('aCCOUNTNO')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.accountTitle" for="field_accountTitle">Account Title</label>
+                    <input type="text" class="form-control" name="accountTitle" id="field_accountTitle"
+                           formControlName="accountTitle"/>
+                    <div *ngIf="editForm.get('accountTitle')!.invalid && (editForm.get('accountTitle')!.dirty || editForm.get('accountTitle')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('accountTitle')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.oDDays" for="field_oDDays">O D Days</label>
+                    <input type="number" class="form-control" name="oDDays" id="field_oDDays"
+                           formControlName="oDDays"/>
+                    <div *ngIf="editForm.get('oDDays')!.invalid && (editForm.get('oDDays')!.dirty || editForm.get('oDDays')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('oDDays')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('oDDays')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.oSAmount" for="field_oSAmount">O S Amount</label>
+                    <input type="number" class="form-control" name="oSAmount" id="field_oSAmount"
+                           formControlName="oSAmount"/>
+                    <div *ngIf="editForm.get('oSAmount')!.invalid && (editForm.get('oSAmount')!.dirty || editForm.get('oSAmount')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('oSAmount')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('oSAmount')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.oSProfit" for="field_oSProfit">O S Profit</label>
+                    <input type="number" class="form-control" name="oSProfit" id="field_oSProfit"
+                           formControlName="oSProfit"/>
+                    <div *ngIf="editForm.get('oSProfit')!.invalid && (editForm.get('oSProfit')!.dirty || editForm.get('oSProfit')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('oSProfit')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('oSProfit')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.cROID" for="field_cROID">C ROID</label>
+                    <input type="text" class="form-control" name="cROID" id="field_cROID"
+                           formControlName="cROID"/>
+                    <div *ngIf="editForm.get('cROID')!.invalid && (editForm.get('cROID')!.dirty || editForm.get('cROID')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('cROID')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.cRONAME" for="field_cRONAME">C RONAME</label>
+                    <input type="text" class="form-control" name="cRONAME" id="field_cRONAME"
+                           formControlName="cRONAME"/>
+                    <div *ngIf="editForm.get('cRONAME')!.invalid && (editForm.get('cRONAME')!.dirty || editForm.get('cRONAME')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('cRONAME')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.rELATIONID" for="field_rELATIONID">R ELATIONID</label>
+                    <input type="text" class="form-control" name="rELATIONID" id="field_rELATIONID"
+                           formControlName="rELATIONID"/>
+                    <div *ngIf="editForm.get('rELATIONID')!.invalid && (editForm.get('rELATIONID')!.dirty || editForm.get('rELATIONID')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('rELATIONID')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.wILLINGTOPAY" for="field_wILLINGTOPAY">W ILLINGTOPAY</label>
+                    <input type="text" class="form-control" name="wILLINGTOPAY" id="field_wILLINGTOPAY"
+                           formControlName="wILLINGTOPAY"/>
+                    <div *ngIf="editForm.get('wILLINGTOPAY')!.invalid && (editForm.get('wILLINGTOPAY')!.dirty || editForm.get('wILLINGTOPAY')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('wILLINGTOPAY')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.fOLLOWUPDATE" for="field_fOLLOWUPDATE">F OLLOWUPDATE</label>
+                    <div class="input-group">
+                        <input id="field_fOLLOWUPDATE" type="text" class="form-control" name="fOLLOWUPDATE" ngbDatepicker #fOLLOWUPDATEDp="ngbDatepicker" formControlName="fOLLOWUPDATE"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="fOLLOWUPDATEDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.dELINQUENCYREASON" for="field_dELINQUENCYREASON">D ELINQUENCYREASON</label>
+                    <input type="text" class="form-control" name="dELINQUENCYREASON" id="field_dELINQUENCYREASON"
+                           formControlName="dELINQUENCYREASON"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.vISITEDBY" for="field_vISITEDBY">V ISITEDBY</label>
+                    <input type="text" class="form-control" name="vISITEDBY" id="field_vISITEDBY"
+                           formControlName="vISITEDBY"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.cREATEDON" for="field_cREATEDON">C REATEDON</label>
+                    <div class="input-group">
+                        <input id="field_cREATEDON" type="text" class="form-control" name="cREATEDON" ngbDatepicker #cREATEDONDp="ngbDatepicker" formControlName="cREATEDON"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="cREATEDONDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

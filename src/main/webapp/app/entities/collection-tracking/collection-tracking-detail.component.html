@@ -1,0 +1,110 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="collectionTracking">
+            <h2><span jhiTranslate="ccwApplicationApp.collectionTracking.detail.title">Collection Tracking</span> {{ collectionTracking.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.eMPID">E MPID</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.eMPID }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.eMPNAME">E MPNAME</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.eMPNAME }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.uNITID">U NITID</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.uNITID }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.pROMISEDATE">P ROMISEDATE</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.pROMISEDATE }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.cOMMENTS">C OMMENTS</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.cOMMENTS }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.bUSINESSPROPOSALNO">B USINESSPROPOSALNO</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.bUSINESSPROPOSALNO }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.sUBPROPOSALNO">S UBPROPOSALNO</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.sUBPROPOSALNO }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.mOBILENO">M OBILENO</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.mOBILENO }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.aCCOUNTNO">A CCOUNTNO</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.aCCOUNTNO }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.accountTitle">Account Title</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.accountTitle }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.oDDays">O D Days</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.oDDays }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.oSAmount">O S Amount</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.oSAmount }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.oSProfit">O S Profit</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.oSProfit }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.cROID">C ROID</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.cROID }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.cRONAME">C RONAME</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.cRONAME }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.rELATIONID">R ELATIONID</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.rELATIONID }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.wILLINGTOPAY">W ILLINGTOPAY</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.wILLINGTOPAY }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.fOLLOWUPDATE">F OLLOWUPDATE</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.fOLLOWUPDATE }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.dELINQUENCYREASON">D ELINQUENCYREASON</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.dELINQUENCYREASON }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.vISITEDBY">V ISITEDBY</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.vISITEDBY }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.cREATEDON">C REATEDON</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.cREATEDON }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/collection-tracking', collectionTracking.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
